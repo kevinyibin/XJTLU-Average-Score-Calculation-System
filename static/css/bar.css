@@ -1,0 +1,48 @@
+span {
+    color: inherit;
+}
+
+.nav-main .nav-span .nav-active,
+.datav-nav .nav-main .nav-span .nav-link:hover {
+    color: #00baff !important;
+}
+
+.nav-main .nav-span .nav-link {
+    text-decoration: none !important;
+    display: block;
+    color: #fff;
+    font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: auto;
+    min-width: 140px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    padding: 0 35px;
+}
+
+.datav-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.datav-font {
+    font-family: "datav-font" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-main .nav-icon {
+    padding-right: 5px;
+    font-size: 20px;
+}
+
+/*.nav-main {*/
+/*    !* z-index: 10; *!*/
+/*    display: flex;*/
+/*    top: 20px;*/
+/*    position: fixed;*/
+/*    width: 100%;*/
+/*    min-width: 1024px;*/
+/*}*/

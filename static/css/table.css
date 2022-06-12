@@ -1,0 +1,120 @@
+* {
+	/* 页面初始化 清除元素的内外边距 */
+	padding: 0;
+	margin: 0;
+	/* 盒子模型 */
+	box-sizing: border-box;
+}
+body {
+	/* 弹性布局 让页面元素垂直+水平居中 */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* 让页面高度占浏览器可视区域的高度 */
+	height: 100vh;
+	background: linear-gradient(#141e30, #243b55);
+	font-family: "Microsoft YaHei", "微软雅黑" !important;
+}
+
+a{
+	text-decoration:none;
+}
+
+.btn {
+		/* 弹性布局 让子元素称为弹性项目 */
+		display: flex;
+		/* 让弹性项目垂直排列 原理是改变弹性盒子的主轴方向 父元素就是弹性盒子 现在改变后的主轴方向是向下了 */
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+}
+
+.login {
+	/* 弹性布局 让子元素称为弹性项目 */
+	display: flex;
+	/* 让弹性项目垂直排列 原理是改变弹性盒子的主轴方向 父元素就是弹性盒子 现在改变后的主轴方向是向下了 */
+	flex-direction: column;
+	/* 让弹性项目在交叉轴方向水平居中 现在主轴的方向是向下 交叉轴的方向是与主轴垂直 交叉轴的方向是向右 */
+	align-items: center;
+	max-width: 1800px;
+	padding: 20px;
+	background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+	border-radius: 20px;
+	margin: 50px ;
+}
+
+.login_box .sub {
+	/* 清除input框自带的边框和轮廓 */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 25px;
+	outline: none;
+	border: none;
+	width: 15%;
+	padding: 10px 0;
+	color: #fff;
+	font-size: 16px;
+	border: 1px solid #fff;
+	/* 背景颜色为透明色 */
+	background-color: transparent;
+	/* 同样加个过渡 */
+	transition: all 0.5s;
+	border-radius: 7px;
+}
+.login h2 {
+	font-size: 55px;
+	color: #fff;
+
+}
+
+.login_box .sub:hover {
+	color: #fff;
+	border-radius: 5px;
+	border: 1px solid #ce57c1;
+	background-color: #ce57c1;
+	box-shadow: 0 0 5px #ce57c1, 0 0 25px #ce57c1, 0 0 25px #ce57c1,
+		0 0 10px #ce57c1;
+}
+.container {
+	/* 溢出隐藏 */
+	overflow: hidden;
+	/* 外边距 上下为0  左右为20px */
+	margin: 0 20px;
+	background-color: #fff;
+	/* 盒子阴影 */
+	/* box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); */
+	border-radius: 10px;
+	border: 0px;
+}
+.container table {
+	/* 让表格的边框合并在一起 */
+	border-collapse: collapse;
+	font-size-adjust: inherit;
+
+}
+/* 在做pc端 不注释掉看不到效果 */
+.container table thead tr th {
+	color: #fff;
+	background-color: #324960;
+	border: 1px solid #394f68;
+
+}
+
+.container table thead tr th,
+.container table tbody tr td {
+	text-align: center;
+	font-size: small;
+	/* 先不加 大屏就正常了 */
+	padding: 5px 15px;
+}
+.container table tbody tr td {
+	border: 1px solid rgb(172, 172, 172);
+}
+.container table tbody tr:nth-child(odd) {
+	background-color: #f8f8f8;
+}
+
+

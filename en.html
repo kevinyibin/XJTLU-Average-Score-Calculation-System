@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="keyword1,keyword2,keyword3">
+  <meta name="description" content="this is my page">
+  <meta name="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="./static/css/index.css" />
+  <link rel="stylesheet" href="./static/css/nav.css">
+  <link rel="stylesheet" href="./static/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+  <link rel="stylesheet" href="./static/css/bar.css">
+  <title>All Pass - 您的成绩助手</title>
+  <link rel="shortcut icon" href="./static/img/icon.png" />
+</head>
+
+
+<body>
+  <div class="login">
+    <h2>ALL PASS</h2>
+    <p style="color: white; margin-bottom: 20px">Please paste your score in the white box below. Click to view the
+      tutorial.
+      <!-- <a href="javascript:void(0);" οnclick="showModal()">使用教程</a> -->
+      <button class="a" onclick="showModal()">Tutorial</button>
+    </p>
+    <div class="login_box">
+      <div class="box">
+        <div class="cliptext" id="tab" contenteditable="true" spellcheck="false" onkeyup="checkKey(this,event)"></div>
+      </div>
+
+      <div class="btn">
+        <button class="sub" onclick="getGPA()"> ① GPA </button>
+        <button class="sub" onclick="getResult()"> ② Average </button>
+        <button class="sub" onclick="location.reload();"> ③ Reload </button>
+      </div>
+      <div class="gpa" id="gpa"></div>
+      <div class="result-wrapper" id="avg"></div>
+    </div>
+  </div>
+  <div class="lang">
+    <div class="nav">
+      <div class="nav-main">
+        <canvas id="canvas-2761" style="position: absolute; z-index: -1; left: 0px;"></canvas>
+        <span class="nav-span"><a class="nav-link nav-active" aria-current="true" href="https://www.kevinbean.top/"
+            data-spm-anchor-id="datav.10712463.0.0"><i class="datav-font datav-icon icon-ArtboardCopy9 nav-icon"></i>
+            <!-- react-text: 60 -->Home
+            <!-- /react-text -->
+          </a></span><span class="nav-span"><a class="nav-link" aria-current="false"
+            href="javascript:canvasnav._toggle(1)" data-spm-anchor-id="datav.10712463.0.0"><i
+              class="datav-font datav-icon icon-ArtboardCopy10 nav-icon"
+              data-spm-anchor-id="datav.10712463.0.i0.6f053967skiQbA"></i><!-- react-text: 64 -->Calculator
+      </div>
+    </div>
+    <div>
+      <a href="index.html">简体中文</a><span> | </span><a href="en.html">English</a>
+    </div>
+  </div>
+  <p class="note"> *Due to different schools have different ways to calculate GPA, the GPA results only for reference.
+  </p>
+  <div class="gov">
+    <img src="static/img/download.png"> <a target="_blank" href="https://beian.miit.gov.cn/">Record No.
+      [津ICP备2021006207号]</a>
+  </div>
+
+  <button class="view-modal"></button>
+  <div class="popup">
+    <header>
+      <span>❗️Please follow the steps below❗️</span>
+      <div class="close"><i class="uil uil-times"></i></div>
+    </header>
+    <div class="content">
+      <p>1. Open the Full Academic Records page of the e-Bridge score form.</p>
+      <div class="field">
+        <i class="url-icon uil uil-link"></i>
+        <input type="text" readonly value="https://ebridge.xjtlu.edu.cn/">
+        <button>Copy</button>
+      </div>
+
+      <p>2. Copy the table in the range of the red box.</p>
+      <div class="img">
+        <img src="./static/img/score_en.png" alt="">
+      </div>
+      <p>3. Use the keyboard to paste the form.</p>
+      <div class="img">
+        <img style="width: 99%; display: flex; margin: auto;" src="./static/img/login_en.png" alt="">
+      </div>
+      <p>4. Click "GPA" or "Average" and you are done!</p>
+    </div>
+  </div>
+
+  <script src="./static/js/nav.js"></script>
+  <script src="./static/js/index.js"></script>
+  
+</body>
+</html>

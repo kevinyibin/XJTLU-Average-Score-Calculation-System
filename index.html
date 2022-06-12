@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="keyword1,keyword2,keyword3">
+  <meta name="description" content="this is my page">
+  <meta name="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="./major/style.css" type="text/css">
+  <link rel="stylesheet" href="./window/style.css">
+  <link rel="stylesheet" href="./about/css/index.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/nav.css">
+  <link rel="stylesheet" href="./static/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+  <link rel="stylesheet" href="./static/css/bar.css">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_3449334_vb38gvi0ssk.css">
+  <title>All Pass - 西浦同学的成绩助手</title>
+  <link rel="shortcut icon" href="./static/img/icon.png" />
+</head>
+
+
+<body>
+  <div class="login" id="01">
+    <h2>ALL PASS</h2>
+    <p style="color: white; margin-bottom: 20px">请在下方白色方框中粘贴您的成绩表格，点击查看详细使用教程。
+      <!-- <a href="javascript:void(0);" οnclick="showModal()">使用教程</a> -->
+      <button class="a" onclick="showModal()">图文教程</button>
+    </p>
+    <div class="login_box">
+      <div class="box">
+        <div class="cliptext" id="tab" contenteditable="true" spellcheck="false" onkeyup="checkKey(this,event)"></div>
+      </div>
+
+      <div class="btn">
+        <div id="one" class="button">视频教程</div>
+        <button class="sub" onclick="getGPA()"> ① 计算GPA</button>
+        <button class="sub" onclick="getResult()"> ② 计算均分</button>
+        <button class="sub" onclick="location.reload();"> ③ 重新计算</button>
+      </div>
+      <div class="gpa" id="gpa"></div>
+      <div class="result-wrapper" id="avg"></div>
+    </div>
+  </div>
+
+  <div class="grade" id="02">
+    <ul class="items-group">
+      <li class="item">
+        <div class="desc-group">
+          <h3>21-22学年</h3>
+          <div class="pdf">
+            <p>尚未更新，敬请期待……</p>
+          </div>
+        </div>
+        </a>
+      </li>
+      <li class="item">
+        <div class="desc-group">
+          <h3>20-21学年</h3>
+          <div class="pdf">
+            <a href="./static/课程与专业均分/20-21学年课程或专业均分/PROGRAMME STATISTICS-202021.pdf" target="_blank">专业均分</a>
+            <a href="./static/课程与专业均分/20-21学年课程或专业均分/MODULE STATISTICS-202021.pdf" target="_blank">科目均分</a>
+          </div>
+        </div>
+        </a>
+      </li>
+      <li class="item">
+        <div class="desc-group">
+          <h3>19-20学年</h3>
+          <div class="pdf">
+            <a href="./static/课程与专业均分/19-20学年课程或专业均分/PROGRAMME STATISTICS-201920.pdf" target="_blank">专业均分</a>
+            <a href="./static/课程与专业均分/19-20学年课程或专业均分/MODULE STATISTICS-201920.pdf" target="_blank">科目均分</a>
+          </div>
+        </div>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="scholarship" id="03">
+    <ul class="items-group">
+      <li class="item">
+        <div class="desc-group">
+          <h3>21-22学年</h3>
+
+          <div class="pdf">
+            <p>尚未更新，敬请期待……</p>
+            <!-- <a href="#">专业均分</a>
+            <a href="#">科目均分</a> -->
+          </div>
+        </div>
+        </a>
+      </li>
+      <li class="item">
+        <div class="desc-group">
+          <h3>20-21学年</h3>
+          <div class="pdf">
+            <a href="./static/奖学金/20-21/202021_AY_Scholarship_name_list.pdf" target="_blank">获奖名单</a>
+            <a href="./static/奖学金/20-21/202021_AY_UG_Scholarship_Threshhold.pdf" target="_blank">最低标准</a>
+          </div>
+        </div>
+        </a>
+      </li>
+      <li class="item">
+        <div class="desc-group">
+          <h3>19-20学年</h3>
+          <div class="pdf">
+            <a href="./static/奖学金/19-20/Academic Scholarship name list 201920 AY.pdf" target="_blank">获奖名单</a>
+            <a href="./static/奖学金/19-20/201920 AY Scholarship threshhold.pdf" target="_blank">最低标准</a>
+          </div>
+        </div>
+        </a>
+      </li>
+      <li class="item">
+        <div class="desc-group">
+          <h3>18-19学年</h3>
+          <div class="pdf">
+            <a href="./static/奖学金/18-19/XJTLU-academic-scholarship-list-for-201819-academic-year-updated.pdf"
+              target="_blank">获奖名单</a>
+            <a href="./static/奖学金/18-19/Threshold-201819-ACY-12-07.pdf" target="_blank">最低标准</a>
+          </div>
+        </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="about" id="04">
+    <h1>Kevin Bean</h1>
+    <div class="contact">
+      <h2>使用反馈</h2>
+      <p>欢迎使用以下方式联系我，我会尽快回复您的反馈！</p>
+      <div class="contact-group">
+        <!-- email -->
+        <div class="contact-item">
+          <i class="iconfont icon-youjian"></i>
+          <a href="mailto:KevinBean@Foxmail.com"> 邮件</a>
+        </div>
+        <!-- github -->
+        <div class="contact-item">
+          <i class="iconfont icon-github-fill"></i>
+          <a href="https://github.com/kevinyibin/XJTLU-Average-Score-Calculation-System" target="_blank"> GitHub </a>
+        </div>
+        <!-- bilibili -->
+        <div class="contact-item">
+          <i class="iconfont icon-bilibili"></i>
+          <a href="https://space.bilibili.com/163625122" target="_blank"> Bilibili </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="lang">
+    <div class="nav">
+      <div class="nav-main">
+        <canvas id="canvas-2761" style="position: absolute; z-index: -1; left: 0px;"></canvas>
+        <span class="nav-span"><a class="nav-link nav-active" aria-current="true" href="https://www.kevinbean.top/"
+            data-spm-anchor-id="datav.10712463.0.0"><i class="datav-font datav-icon icon-ArtboardCopy9 nav-icon"></i>
+            首页
+          </a></span>
+        <span class="nav-span"><a class="nav-link" aria-current="false" href="javascript:canvasnav._toggle(1)"
+            onclick="open_01()" data-spm-anchor-id="datav.10712463.0.0"><i
+              class="datav-font datav-icon icon-ArtboardCopy10 nav-icon"
+              data-spm-anchor-id="datav.10712463.0.i0.6f053967skiQbA"></i>
+            均分计算器
+          </a></span>
+        <span class="nav-span"><a class="nav-link" aria-current="false" href="javascript:canvasnav._toggle(2);"
+            onclick="open_02()" data-spm-anchor-id="datav.10712463.0.0"><i
+              class="datav-font datav-icon icon-ArtboardCopy12 nav-icon"></i>
+            专业均分
+          </a></span>
+        <span class="nav-span"><a class="nav-link" aria-current="false" href="javascript:canvasnav._toggle(3);"
+            onclick="open_03()" data-spm-anchor-id="datav.10712463.0.0"><i
+              class="datav-font datav-icon icon-ArtboardCopy11 nav-icon"></i>
+            奖学金
+          </a></span>
+        <span class="nav-span"><a class="nav-link" aria-current="false" href="javascript:canvasnav._toggle(4);"
+            onclick="open_04()" data-spm-anchor-id="datav.10712463.0.0"><i
+              class="datav-font datav-icon icon-ArtboardCopy11 nav-icon"></i>
+            联系作者
+          </a></span>
+      </div>
+    </div>
+    <div>
+      <a href="index.html">简体中文</a><span> | </span><a href="en.html">English</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p class="note" id="note"> *由于不同学校计算 GPA 方式不同，该网站计算的 GPA 结果仅供参考，望知悉。</p>
+    <div class="gov">
+      <img src="static/img/download.png"> <a target="_blank"
+        href="https://beian.miit.gov.cn/">备案号：[津ICP备2021006207号]</a>
+    </div>
+  </div>
+
+
+  <button class="view-modal"></button>
+  <div class="popup">
+    <header>
+      <span>❗️请按照以下步骤操作哈❗️</span>
+      <div class="close"><i class="uil uil-times"></i></div>
+    </header>
+    <div class="content">
+      <p>1. 打开 e-Bridge 成绩表格 Full Academic Records 页面。</p>
+      <div class="field">
+        <i class="url-icon uil uil-link"></i>
+        <input type="text" readonly value="https://ebridge.xjtlu.edu.cn/">
+        <button>Copy</button>
+      </div>
+
+      <p>2. 按照红框的范围复制表格。</p>
+      <div class="img">
+        <img src="./static/img/score_zh.png" alt="">
+      </div>
+      <p>3. 使用键盘粘贴表格。</p>
+      <div class="img">
+        <img style="width: 99%; display: flex; margin: auto;" src="./static/img/login_zh.png" alt="">
+      </div>
+      <p>4. 点击“计算 GPA” 或 “计算均分” 就大功告成啦！</p>
+    </div>
+  </div>
+
+  <div id="modal-container">
+    <div class="modal-background">
+      <div class="modal">
+        <h2>视频教程</h2>
+        <!-- <p>点击下方播放按钮即可查看操作步骤。</p> -->
+        <p>该视频与该系统教程无关，仅在测试中用作占位符。</p>
+        <video width="720" height="480" loop="loop" controls="controls">
+          <source src="./static/20211020125124111.mp4" type="video/mp4">
+        </video>
+
+
+        <svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+          <rect x="0" y="0" fill="none" width="226" height="162" rx="3" ry="3"></rect>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+  <script src="./window/script.js"></script>
+
+
+  <script>
+    function open_01() {
+      document.getElementById("01").style.display = "flex";
+      document.getElementById("02").style.display = "none";
+      document.getElementById("03").style.display = "none";
+      document.getElementById("04").style.display = "none";
+      document.getElementById("note").style.display = "block";
+    }
+
+    function open_02() {
+      document.getElementById("01").style.display = "none";
+
+      document.getElementById("02").style.display = "flex";
+      document.getElementById("03").style.display = "none";
+      document.getElementById("04").style.display = "none";
+      document.getElementById("note").style.display = "none";
+    }
+
+    function open_03() {
+      document.getElementById("01").style.display = "none";
+      document.getElementById("02").style.display = "none";
+      document.getElementById("03").style.display = "flex";
+      document.getElementById("04").style.display = "none";
+      document.getElementById("note").style.display = "none";
+    }
+
+    function open_04() {
+      document.getElementById("01").style.display = "none";
+      document.getElementById("02").style.display = "none";
+      document.getElementById("03").style.display = "none";
+      document.getElementById("04").style.display = "flex";
+      document.getElementById("note").style.display = "none";
+    }
+
+  </script>
+
+<script language="JavaScript">
+
+  // 判断是否是pc设备
+  function IsPC() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPod"];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+      if (userAgentInfo.indexOf(Agents[v]) > 0) {
+        flag = false;
+        console.log("手机端");
+        break;
+      }
+    }
+    if (window.screen.width >= 768) {
+      flag = true;
+      console.log("PC端");
+    }
+    return flag;
+  }
+
+  // 页面加载完成后执行
+  window.onload = function () {
+    if (IsPC()) {
+      return;
+    }
+    else {
+      window.location.href = "./mobile/index.html";
+    }
+  }
+</script>
+
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/nav.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+* {
+	/* 初始化 清除页面元素的内外边距 */
+	/* padding: 0; */
+	margin: 0;
+	/* 盒子模型 */
+	box-sizing: border-box;
+}
+
+body {
+	/* 弹性布局 让页面元素垂直+水平居中 */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* 让页面始终占浏览器可视区域总高度 */
+	height: 100vh;
+	/* 背景渐变色 */
+	background: linear-gradient(#141e30, #243b55);
+	font-family: "Microsoft YaHei", "微软雅黑" !important;
+}
+
+.login p {
+	text-align: center;
+}
+
+.a {
+	transition: box-shadow .2s ease-in-out;
+}
+
+.a:hover {
+	box-shadow: 0 0 20px #ffffff56;
+	transition: box-shadow .2s ease-in-out;
+}
+
+
+
+.login {
+	/* 弹性布局 让子元素称为弹性项目 */
+	display: flex;
+	/* 让弹性项目垂直排列 原理是改变弹性盒子的主轴方向 父元素就是弹性盒子 现在改变后的主轴方向是向下了 */
+	flex-direction: column;
+	/* 让弹性项目在交叉轴方向水平居中 现在主轴的方向是向下 交叉轴的方向是与主轴垂直 交叉轴的方向是向右 */
+	align-items: center;
+	min-width: 800px;
+	min-height: 400px;
+	padding: 15px 80px;
+	padding-bottom: 40px;
+	background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+	border-radius: 20px;
+	margin: 50px;
+}
+
+.login h2 {
+	font-size: 55px;
+	color: #ffffff;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+
+.login .login_box {
+	/* 相对定位 */
+	position: relative;
+	width: 100%;
+}
+
+.btn {
+	text-align: center;
+}
+
+.login .login_box .sub {
+	/* 清除input框自带的边框和轮廓 */
+	display: inline-block;
+	outline: none;
+	margin: 25px 15px;
+	width: 120px;
+	padding: 10px 0;
+	color: #fff;
+	font-size: 16px;
+	border: 1px solid #fff;
+	/* 背景颜色为透明色 */
+	background-color: transparent;
+	/* 同样加个过渡 */
+	transition: all 0.5s;
+	border-radius: 7px;
+}
+
+
+.login .login_box .sub:hover {
+	color: #fff;
+	border-radius: 5px;
+	border: 1px solid #ce57c1;
+	background-color: #ce57c1;
+	box-shadow: 0 0 5px #ce57c1, 0 0 25px #ce57c1, 0 0 50px #ce57c1,
+		0 0 100px #ce57c1;
+}
+
+.cliptext {
+	text-align: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	min-width: 100%;
+	min-height: 100px;
+	border: #ffffff 2px solid;
+	border-radius: 5px;
+
+}
+
+.cliptext table {
+	width: 888px !important;
+	margin-bottom: 0px !important;
+}
+
+.result-wrapper {
+	display: none;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	font-size: 25px;
+}
+
+.gpa {
+	display: none;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	font-size: 25px;
+}
+
+.box {
+	box-shadow: 0 0 20px #ffffff56;
+	transition: box-shadow .2s ease-out;
+}
+
+.box:hover {
+	box-shadow: 0 0 20px #ffffffd7;
+	transition: box-shadow .2s ease-out;
+}
+
+
+
+.note {
+	position: absolute;
+	color: rgba(255, 255, 255, 0.65);
+	/* 左下角 */
+	bottom: 20px;
+	left: 30px;
+}
+
+.gov {
+	position: absolute;
+	color: rgba(255, 255, 255, 0.65);
+	/* 右下角 */
+	bottom: 20px;
+	right: 30px;
+}
+
+.gov img {
+	position: absolute;
+	left: -23px;
+}
+
+.gov a {
+	color: rgba(255, 255, 255, 0.65);
+	text-decoration: none;
+}
+
+.gov a:hover {
+	color: rgba(255, 255, 255, 0.65);
+	text-decoration: none;
+	border-bottom: rgba(255, 255, 255, 0.778) solid 1px;
+}
+
+.lang {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 15;
+	padding-right: 30px;
+	position: absolute;
+	color: rgba(255, 255, 255, 0.65);
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 70px;
+}
+
+
+.lang a {
+	color: rgba(255, 255, 255);
+	text-decoration: none;
+}
+
+.lang a:hover {
+	color: rgba(255, 255, 255, 0.65);
+	text-decoration: none;
+}
+
+.modal-body{
+	color: rgb(255, 255, 255);
+}
+
+.login{
+	display: block;
+}
+
+.grade{
+	display: none;
+}
+
+.scholarship{
+	display: none;
+}
+
+.about{
+	display: none;
+}

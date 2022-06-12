@@ -1,0 +1,88 @@
+
+.about h1{
+    top: 64px;
+    position: relative;
+    /* 文字大写 */
+    /* text-transform: uppercase; */
+    color: #00000031;
+    /* 1rem=16px */
+    font-size: 7rem;
+    
+}
+.about h1::after{
+    content: 'Kevin Bean';
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 文字透明色 */
+    color: transparent;
+    background-image: linear-gradient(to right,
+    #db5436,#2f4b91,#00d2d3,rgb(228, 228, 53),
+    #ad2f7a,#2e86de,#69d359,#e84118);
+    /* 背景绘制区域 当值为text 的时候 代表设置了文字的镂空效果 但是前提必须是文字颜色为透明色 */
+    background-clip: text;
+    /* 谷歌浏览器的私有属性 */
+    -webkit-background-clip: text;
+    /* 利用裁切来创建元素的可显示区域 circle表示创建了圆形 100px表示圆形的直径,0%和50%表示圆形的圆心 圆形的直径和圆形的圆心利用at关键字隔开 */
+    clip-path: circle(100px at 0% 50%);
+    /* 动画  名称 时长 infinite 表示无限次播放 */
+    animation: move 6s infinite;
+}
+/* 下面设置圆形移动效果 */
+@keyframes move{
+    0%{
+        clip-path: circle(1000px at 10% 50%);
+    }
+    50%{
+        clip-path: circle(1000px at 90% 50%);
+    }
+    100%{
+        clip-path: circle(1000px at 10% 50%);
+    }
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.about .contact{
+    position: relative;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px -20px 20px rgba(0, 0, 0, 0.407), 
+    0px 20px 20px rgba(0, 0, 0, 0.195), 
+    0px 10px 10px rgba(0, 0, 0, 0.1), 
+    0px -10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about .contact h2{
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.about .contact p{
+    font-size: 1rem;
+}
+
+.about .contact a{
+    color: #000000;
+    text-decoration: none;
+}
+
+.about .contact a:hover{
+    color: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+.about .contact .contact-group{
+    display: flex;
+    margin-top: 20px;
+}
+
+.about .contact .contact-item{
+    margin-right: 20px;
+}
