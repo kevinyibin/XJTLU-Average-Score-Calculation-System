@@ -104,7 +104,9 @@ body {
 	min-height: 100px;
 	border: #ffffff 2px solid;
 	border-radius: 5px;
-
+	overflow:auto;
+	overflow-x: hidden;
+    height: 250px;
 }
 
 .cliptext table {
@@ -129,6 +131,7 @@ body {
 .box {
 	box-shadow: 0 0 20px #ffffff56;
 	transition: box-shadow .2s ease-out;
+
 }
 
 .box:hover {
