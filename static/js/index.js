@@ -61,6 +61,7 @@ function getGPA() {
     console.log(resultArr)
   }
 
+
   // 遍历dom
   function ergodic() {
     let arr = [];
