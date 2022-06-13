@@ -1,5 +1,5 @@
 
-.about h1{
+.about .a1 h1{
     top: 64px;
     position: relative;
     /* 文字大写 */
@@ -9,7 +9,7 @@
     font-size: 7rem;
     
 }
-.about h1::after{
+.about .a1 h1::after{
     content: 'Kevin Bean';
     position: absolute;
     top: 0;
@@ -28,6 +28,39 @@
     /* 动画  名称 时长 infinite 表示无限次播放 */
     animation: move 6s infinite;
 }
+
+.about .a2 h1{
+    top: 64px;
+    position: relative;
+    /* 文字大写 */
+    /* text-transform: uppercase; */
+    color: #00000031;
+    /* 1rem=16px */
+    font-size: 7rem;
+    
+}
+.about .a2 h1::after{
+    content: 'Big Lemon';
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 文字透明色 */
+    color: transparent;
+    background-image: linear-gradient(to right,
+    #db5436,#2f4b91,#00d2d3,rgb(228, 228, 53),
+    #ad2f7a,#2e86de,#69d359,#e84118);
+    /* 背景绘制区域 当值为text 的时候 代表设置了文字的镂空效果 但是前提必须是文字颜色为透明色 */
+    background-clip: text;
+    /* 谷歌浏览器的私有属性 */
+    -webkit-background-clip: text;
+    /* 利用裁切来创建元素的可显示区域 circle表示创建了圆形 100px表示圆形的直径,0%和50%表示圆形的圆心 圆形的直径和圆形的圆心利用at关键字隔开 */
+    clip-path: circle(100px at 0% 50%);
+    /* 动画  名称 时长 infinite 表示无限次播放 */
+    animation: move 6s infinite;
+}
+
+
+
 /* 下面设置圆形移动效果 */
 @keyframes move{
     0%{
@@ -43,7 +76,10 @@
 
 .about{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
 }
 
 
@@ -85,4 +121,12 @@
 
 .about .contact .contact-item{
     margin-right: 20px;
+}
+
+.a1{
+    margin: 50px;
+}
+
+.a2{
+    margin: 50px;
 }

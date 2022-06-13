@@ -131,28 +131,47 @@
   </div>
 
   <div class="about" id="04">
-    <h1>Kevin Bean</h1>
-    <div class="contact">
-      <h2>使用反馈</h2>
-      <p>欢迎使用以下方式联系我，我会尽快回复您的反馈！</p>
-      <div class="contact-group">
-        <!-- email -->
-        <div class="contact-item">
-          <i class="iconfont icon-youjian"></i>
-          <a href="mailto:KevinBean@Foxmail.com"> 邮件</a>
-        </div>
-        <!-- github -->
-        <div class="contact-item">
-          <i class="iconfont icon-github-fill"></i>
-          <a href="https://github.com/kevinyibin/XJTLU-Average-Score-Calculation-System" target="_blank"> GitHub </a>
-        </div>
-        <!-- bilibili -->
-        <div class="contact-item">
-          <i class="iconfont icon-bilibili"></i>
-          <a href="https://space.bilibili.com/163625122" target="_blank"> Bilibili </a>
+    <div class="a1">
+      <h1>Kevin Bean</h1>
+      <div class="contact">
+        <h2>Yibin.Gao19</h2>
+        <p>欢迎使用以下方式联系我，我会尽快回复您的反馈！</p>
+        <div class="contact-group">
+          <!-- email -->
+          <div class="contact-item">
+            <i class="iconfont icon-youjian"></i>
+            <a href="mailto:KevinBean@Foxmail.com"> 邮件</a>
+          </div>
+          <!-- github -->
+          <div class="contact-item">
+            <i class="iconfont icon-github-fill"></i>
+            <a href="https://github.com/kevinyibin/XJTLU-Average-Score-Calculation-System" target="_blank"> GitHub </a>
+          </div>
+          <!-- bilibili -->
+          <div class="contact-item">
+            <i class="iconfont icon-bilibili"></i>
+            <a href="https://space.bilibili.com/163625122" target="_blank"> Bilibili </a>
+          </div>
         </div>
       </div>
     </div>
+
+    <div class="a2">
+      <h1>Big Lemon</h1>
+      <div class="contact">
+        <h2>Wenlei.Liu18</h2>
+        <p>欢迎使用以下方式联系我，我会尽快回复您的反馈！</p>
+        <div class="contact-group">
+          <!-- github -->
+          <div class="contact-item">
+            <i class="iconfont icon-github-fill"></i>
+            <a href="https://github.com/BigLemonRepo" target="_blank"> GitHub </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 
 
@@ -238,10 +257,9 @@
         <!-- <video width="720" height="480" controls="controls">
           <source src="./static/20211020125124111.mp4" type="video/mp4">
         </video> -->
-          <iframe src="//player.bilibili.com/player.html?aid=727426747&bvid=BV1TS4y1q72Q&cid=742627428&page=1&high_quality=1" 
-          scrolling="no" border="0" 
-          frameborder="no" framespacing="0" 
-          allowfullscreen="true"> </iframe>
+        <iframe
+          src="//player.bilibili.com/player.html?aid=727426747&bvid=BV1TS4y1q72Q&cid=742627428&page=1&high_quality=1"
+          scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
         <svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
           <rect x="0" y="0" fill="none" width="226" height="162" rx="3" ry="3"></rect>
@@ -291,37 +309,37 @@
 
   </script>
 
-<script language="JavaScript">
+  <script language="JavaScript">
 
-  // 判断是否是pc设备
-  function IsPC() {
-    var userAgentInfo = navigator.userAgent;
-    var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPod"];
-    var flag = true;
-    for (var v = 0; v < Agents.length; v++) {
-      if (userAgentInfo.indexOf(Agents[v]) > 0) {
-        flag = false;
-        console.log("手机端");
-        break;
+    // 判断是否是pc设备
+    function IsPC() {
+      var userAgentInfo = navigator.userAgent;
+      var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPod"];
+      var flag = true;
+      for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+          flag = false;
+          console.log("手机端");
+          break;
+        }
+      }
+      if (window.screen.width >= 768) {
+        flag = true;
+        console.log("PC端");
+      }
+      return flag;
+    }
+
+    // 页面加载完成后执行
+    window.onload = function () {
+      if (IsPC()) {
+        return;
+      }
+      else {
+        window.location.href = "./mobile/index.html";
       }
     }
-    if (window.screen.width >= 768) {
-      flag = true;
-      console.log("PC端");
-    }
-    return flag;
-  }
-
-  // 页面加载完成后执行
-  window.onload = function () {
-    if (IsPC()) {
-      return;
-    }
-    else {
-      window.location.href = "./mobile/index.html";
-    }
-  }
-</script>
+  </script>
 
   <script src="./static/js/index.js"></script>
   <script src="./static/js/nav.js"></script>
