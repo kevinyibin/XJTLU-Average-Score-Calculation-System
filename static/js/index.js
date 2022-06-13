@@ -1,12 +1,22 @@
 function getGPA() {
     const result_dom = document.getElementsByClassName("gpa")[0];
     let gpa = 0;
-    gpa = getResult() / 20 - 1;
+    Average = getResult();
+    if(Average>=70) gpa=4.0;
+    if(Average>=65 && Average<=69.99) gpa=3.6;
+    if(Average>=60 && Average<=64.99) gpa=3.3;
+    if(Average>=55 && Average<=59.99) gpa=3.0;
+    if(Average>=50 && Average<=54.99) gpa=2.6;
+    if(Average>=45 && Average<=49.99) gpa=2.3;
+    if(Average>=43 && Average<=44.99) gpa=2.0;
+    if(Average>=40 && Average<=42.99) gpa=1.0;
+    if(Average>=0 && Average<=39.99) gpa=0.0;
+    
     console.log(gpa);
     if (gpa.toString() == "NaN") {
       document.getElementById("gpa").style.display = "none";
     } else {
-      result_dom.innerHTML = "您的GPA为：" + gpa.toFixed(2);
+      result_dom.innerHTML = "您的GPA为：" + gpa.toFixed(1);
     }
     document.getElementById("gpa").style.display = "block";
     document.getElementById("avg").style.display = "none";
@@ -105,3 +115,4 @@ function getGPA() {
     console.log(average);
     return average;
   }
+
