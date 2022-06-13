@@ -106,7 +106,7 @@ body {
 	border-radius: 5px;
 	overflow:auto;
 	overflow-x: hidden;
-    height: 250px;
+    max-height: 300px;
 }
 
 .cliptext table {
