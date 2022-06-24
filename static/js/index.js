@@ -63,12 +63,17 @@ function windowFun() {
 let index = 0;
 let resultArr = [];
 
+let yearFourArr = [];
+let yearThreeArr = [];
+
 function checkKey(div, e) {
 
   document.getElementsByTagName('div')[0].innerHTML = '<center>' + document.getElementsByTagName('div')[0].innerHTML + '</center>'
 
-  resultArr = ergodic();
-  console.log(resultArr)
+  ergodic();
+  console.log(resultArr);
+  console.log(yearFourArr);
+  console.log(yearThreeArr);
 }
 
 
@@ -93,9 +98,45 @@ function ergodic() {
         credit: parseInt(tr[i].getElementsByTagName("td")[3].innerHTML),
         mark: parseInt(tr[i].getElementsByTagName("td")[4].innerHTML.split("%")[0])
       })
+      if (tbodyIndex == 0) {
+        yearFourArr.push({
+          credit: parseInt(tr[i].getElementsByTagName("td")[3].innerHTML),
+          mark: parseInt(tr[i].getElementsByTagName("td")[4].innerHTML.split("%")[0])
+        })
+      }
+      if (tbodyIndex == 1) {
+        yearThreeArr.push({
+          credit: parseInt(tr[i].getElementsByTagName("td")[3].innerHTML),
+          mark: parseInt(tr[i].getElementsByTagName("td")[4].innerHTML.split("%")[0])
+        })
+      }
     }
   }
-  return arr;
+  resultArr = arr;
+}
+
+function getAvgFromResultArr(arr) {
+  let average = 0;
+  let num1 = 0, num2 = 0
+  for (let i = 0; i < arr.length; i++) {
+    num1 += arr[i].credit * arr[i].mark;
+    num2 += arr[i].credit;
+  }
+  average = num1 / num2;
+  return average;
+}
+
+function getDegreeAvg() {
+  if (resultArr.length === 0) return;
+  const result_dom = document.getElementsByClassName("result-wrapper")[0];
+  let yearFourAvg = getAvgFromResultArr(yearFourArr);
+  let yearThreeAvg = getAvgFromResultArr(yearThreeArr);
+  let average = yearThreeAvg * 0.3 + yearFourAvg * 0.7;
+  result_dom.innerHTML = `您的平均分为: ${average.toFixed(2)} 分`;
+  document.getElementById("avg").style.display = "block";
+  document.getElementById("gpa").style.display = "none";
+  console.log(average);
+  return average;
 }
 
 function getResult() {
