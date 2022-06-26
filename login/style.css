@@ -1,0 +1,85 @@
+.login1 p {
+	text-align: center;
+}
+
+.a {
+	transition: box-shadow .2s ease-in-out;
+}
+
+.a:hover {
+	box-shadow: 0 0 20px #ffffff56;
+	transition: box-shadow .2s ease-in-out;
+}
+
+
+
+.login1 {
+	/* 弹性布局 让子元素称为弹性项目 */
+	display: flex;
+	/* 让弹性项目垂直排列 原理是改变弹性盒子的主轴方向 父元素就是弹性盒子 现在改变后的主轴方向是向下了 */
+	flex-direction: column;
+	/* 让弹性项目在交叉轴方向水平居中 现在主轴的方向是向下 交叉轴的方向是与主轴垂直 交叉轴的方向是向右 */
+	align-items: center;
+	min-width: 800px;
+	min-height: 400px;
+	padding: 15px 80px;
+	padding-bottom: 40px;
+	background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+	border-radius: 20px;
+	margin: 50px;
+}
+
+.login1 h2 {
+	font-size: 65px;
+	color: #ffffff;
+	margin-bottom: 15px;
+	text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.login1 .login_box {
+	/* 相对定位 */
+	position: relative;
+	width: 100%;
+}
+
+.btn {
+	text-align: center;
+}
+
+.login1 .login_box .sub {
+	/* 清除input框自带的边框和轮廓 */
+	display: inline-block;
+	outline: none;
+	margin: 25px 15px;
+	width: 120px;
+	padding: 10px 0;
+	color: #fff;
+	font-size: 16px;
+	border: 1px solid #fff;
+	/* 背景颜色为透明色 */
+	background-color: transparent;
+	/* 同样加个过渡 */
+	transition: all 0.5s;
+	border-radius: 7px;
+}
+
+
+.login1 .login_box .sub:hover {
+	color: #fff;
+	border-radius: 5px;
+	border: 1px solid #ce57c1;
+	background-color: #ce57c1;
+	box-shadow: 0 0 5px #ce57c1, 0 0 25px #ce57c1, 0 0 50px #ce57c1,
+		0 0 100px #ce57c1;
+}
+
+.result {
+	display: none;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	font-size: 25px;
+}

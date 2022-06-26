@@ -128,12 +128,12 @@ function getAvgFromResultArr(arr) {
 
 function getDegreeAvg() {
   if (resultArr.length === 0) return;
-  const result_dom = document.getElementsByClassName("result-wrapper")[0];
+  const result_dom = document.getElementsByClassName("result")[0];
   let yearFourAvg = getAvgFromResultArr(yearFourArr);
   let yearThreeAvg = getAvgFromResultArr(yearThreeArr);
   let average = yearThreeAvg * 0.3 + yearFourAvg * 0.7;
-  result_dom.innerHTML = `您的平均分为: ${average.toFixed(2)} 分`;
-  document.getElementById("avg").style.display = "block";
+  result_dom.innerHTML = `您的学位平均分为: ${average.toFixed(2)} 分`;
+  document.getElementById("avg1").style.display = "block";
   document.getElementById("gpa").style.display = "none";
   console.log(average);
   return average;
